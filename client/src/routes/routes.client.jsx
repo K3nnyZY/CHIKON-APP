@@ -4,10 +4,10 @@ import {Home} from "../pages/Client/"
 const routesClient = [
     {
         path: "/",
-        component: Home,
         layout: ClientLayout,
-    }
-
-]
+        component: Home,
+        exact: true,
+    },
+];
 
 export default routesClient
