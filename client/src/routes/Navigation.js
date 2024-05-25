@@ -1,10 +1,16 @@
-import React from 'react'
-import {Routes} from 'react-router-dom'
+import React from 'react';
+import {BrowserRouter, Routes} from "react-router-dom";
+import routes from './routes';
 
 export function Navigation() {
+
+  console.log("routes -->", routes)
+
   return (
-    <p>
-      <h2>Navigation...</h2>
-    </p>
+    <BrowserRouter>
+      <p>
+        <h1>Navigation</h1>
+      </p>
+    </BrowserRouter>
   )
 }
