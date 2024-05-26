@@ -1,8 +1,13 @@
 import React from 'react'
-import "./AdminLayout.css"
+import { LoginAdmin } from "../../pages/Admin"
+import "./AdminLayout.scss"
 
 export function AdminLayout(props) {
     const {children} = props;
+    const auth = null;
+
+    if(!auth) return <LoginAdmin />;
+    
   return (
     <div>
         {" "}
@@ -10,4 +15,4 @@ export function AdminLayout(props) {
         {children}
     </div>
   )
-}
+}   
