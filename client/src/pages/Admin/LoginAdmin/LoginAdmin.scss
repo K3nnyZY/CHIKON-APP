@@ -34,10 +34,10 @@
   
   .login-admin__content {
     background-color: rgba(255, 255, 255, 0.8); // Fondo blanco con transparencia
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transform: rotateY(10deg); // Rotación para el efecto 3D
+    padding: 50px 50px;
+    border-radius: 20px;
+    width: 500px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
     transition: transform 0.5s; // Transición suave
     position: relative; // Asegura que esté por encima del efecto de agua
   
@@ -48,11 +48,10 @@
     h1 {
       margin: 0;
       padding: 0;
-      font-size: 2em;
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 50px;
     }
   
-    p {
-      margin: 10px 0 0;
-    }
   }
   
