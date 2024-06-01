@@ -1,3 +1,14 @@
 .env
 chikon/__pycache__/
 users/__pycache__/
+categories/__pycache__/
+orders/__pycache__/
+products/__pycache__/
+tables/__pycache__/
+uploads/__pycache__/
+chikon/migrations/
+users/migrations/
+categories/migrations/
+orders/migrations/
+products/migrations/
+__pycache__/
