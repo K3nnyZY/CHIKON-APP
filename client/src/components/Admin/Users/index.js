@@ -1,2 +1,2 @@
-export * from './TablaUsers'
-export * from './AddEditUserForm'
+export * from './AddEditUserForm';
+export * from './TableUsers';

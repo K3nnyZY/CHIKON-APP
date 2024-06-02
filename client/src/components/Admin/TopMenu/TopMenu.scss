@@ -1,6 +1,18 @@
-.top-menu-admin{
-    &__logo{
+.top-menu-admin {
+    &__logo {
         width: 250px;
-        background-color: rgb(204, 7, 7) !important;
+        background-color: #7e0000 !important;
+
+        > h3 {
+            color: #110092;
+        }
+    }
+
+    i.icon {
+        margin: 0 !important;
+    }
+    
+    .ui.header {
+        color: #ffffff
     }
 }

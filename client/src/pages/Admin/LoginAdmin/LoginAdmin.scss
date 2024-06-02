@@ -1,57 +1,25 @@
-// LoginAdmin.scss
 .login-admin {
     height: 100vh;
-    display: flex;
     width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(315deg, rgb(0, 166, 255), rgb(0, 9, 181));
-    overflow: hidden; // Para asegurar que el efecto de agua no salga de los límites
-    perspective: 1000px; // Añade perspectiva para el efecto 3D
-    position: relative;
-  
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://www.transparenttextures.com/patterns/wave-cut.png'); // Efecto de agua
-      opacity: 0.3;
-      animation: moveWater 10s linear infinite;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+
+    &__content {
+        background-color: #fff;
+        padding: 50px 50px;
+        border-radius: 20px;
+        width: 500px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+
+        > h1 {
+            font-size: 35px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
     }
-  }
-  
-  @keyframes moveWater {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(-1600px, 0); // Ajusta según el tamaño de la imagen
-    }
-  }
-  
-  .login-admin__content {
-    background-color: rgba(255, 255, 255, 0.8); // Fondo blanco con transparencia
-    padding: 50px 50px;
-    border-radius: 20px;
-    width: 500px;
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
-    transition: transform 0.5s; // Transición suave
-    position: relative; // Asegura que esté por encima del efecto de agua
-  
-    &:hover {
-      transform: rotateY(0deg); // Rota a la posición original al pasar el ratón
-    }
-  
-    h1 {
-      margin: 0;
-      padding: 0;
-      font-size: 40px;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-  
-  }
-  
+}
