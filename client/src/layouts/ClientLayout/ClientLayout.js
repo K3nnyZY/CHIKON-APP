@@ -39,9 +39,9 @@ export function ClientLayout(props) {
             <Container className='client-layout'>
                 <div className='client-layout__header'>
                     <Link to={`/client/${tableNumber}`}>
-                        <h1>iCard</h1>
+                    <img src='/logo.png' alt="ChiKon Logo" style={{ height: '100px' }} />
                     </Link>
-                    <span>Mesa {tableNumber}</span>
+                    <span className='client-layout__table-number'>Mesa {tableNumber}</span>
 
                     <div>
                         <Button icon onClick={goToCart}>

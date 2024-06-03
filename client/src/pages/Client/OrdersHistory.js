@@ -104,9 +104,9 @@ export function OrdersHistory() {
             )}
 
             <ModalConfirm
-                title="Pagar con tarjeta o efectivo"
+                title="Pago en Nequi o efectivo"
                 show={showTypePayment}
-                onCloseText="Tarjeta"
+                onCloseText="Nequi"
                 onClose={() => onCreatePayment('CARD')}
                 onConfirmText="Efectivo"
                 onConfirm={() => onCreatePayment('CASH')}
