@@ -1,8 +1,6 @@
 # Chikon(_Frontend_)
 
-## *React y Django: Crea una carta digital para restaurantes*
-
-Aplicación **iCard**: carta digital para restaurantes, creada con _React_.
+Aplicación creada con _React_.
 
 Posee dos módulos:
 + Módulo _Administración_ para empleados del restaurante
