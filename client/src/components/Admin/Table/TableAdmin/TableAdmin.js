@@ -4,13 +4,12 @@ import { size } from 'lodash';
 import classNames from 'classnames';
 
 import { Label } from 'semantic-ui-react';
-
 import './TableAdmin.scss';
 
 import { ORDER_STATUS } from '../../../../utils/constants';
-import { ReactComponent as IcTable } from '../../../../assets/table.svg';
 import { getOrdersByTableApi } from '../../../../api/orders';
 import { usePayment } from '../../../../hooks';
+import { ReactComponent as TABLE } from '../../../../assets/table1.svg';
 
 
 export function TableAdmin(props) {
@@ -74,7 +73,7 @@ export function TableAdmin(props) {
                 </Label>
             )}
 
-            <IcTable className={classNames({
+            <TABLE className={classNames({
                 pending: size(orders) > 0,
                 busy: tableBusy,
                 "pending-payment": pendingPayment,
