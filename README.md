@@ -112,3 +112,20 @@ Para la interacción de los clientes con el restaurante, incluye funcionalidades
     ```bash
     npm start
     ```
+
+## Otra forma de ejecutar el proyecto (Docker-compose)
+También se puede ejecutar el proyecto utilizando Docker-compose, se debe tener instalado Docker y Docker-compose en el sistema. Para ello, se deben ejecutar los siguientes comandos en el terminal:
+
+1. **Construir el contenedor**
+
+    ```bash
+    docker-compose build
+    ```
+
+2. **Levantar el contenedor**
+
+    ```bash
+    docker-compose up
+    ```
+
+Este comando levantará dos contenedores: uno para el backend y otro para el frontend. El backend estará disponible en `http://localhost:8000` y el frontend en `http://localhost:3000`.
