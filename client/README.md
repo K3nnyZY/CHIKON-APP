@@ -1,4 +1,4 @@
-# iCard (_Frontend_)
+# Chikon(_Frontend_)
 
 ## *React y Django: Crea una carta digital para restaurantes*
 
