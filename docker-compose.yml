@@ -17,5 +17,5 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./client:/app
-    ports:
+    ports
       - "3000:3000"
