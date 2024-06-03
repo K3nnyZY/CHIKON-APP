@@ -12,8 +12,6 @@ RUN chmod +x ./node_modules/.bin/react-scripts || true
 
 COPY . /app/
 
-RUN npm run build
-
 EXPOSE 3000
 
 CMD ["npm", "start"]
