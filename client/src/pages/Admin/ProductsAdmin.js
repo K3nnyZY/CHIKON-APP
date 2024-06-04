@@ -29,18 +29,6 @@ export function ProductsAdmin() {
         openCloseModal();
     }
 
-    const updateProduct = (data) => {
-        setTitleModal('Actualizar producto');
-        setContentModal(
-            <AddEditProductForm
-                onClose={openCloseModal}
-                onRefetch={onRefetch}
-                product={data}
-            />
-        );
-        openCloseModal();
-    }
-
     const onDeleteProduct = async (data) => {
 
         Swal.fire({
@@ -77,7 +65,6 @@ export function ProductsAdmin() {
             ) : (
                 <TableProductAdmin
                     products={products}
-                    updateProduct={updateProduct}
                     deleteProduct={onDeleteProduct}
                 />
             )}

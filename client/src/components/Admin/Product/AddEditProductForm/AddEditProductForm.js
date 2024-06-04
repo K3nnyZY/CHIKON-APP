@@ -9,19 +9,21 @@ import './AddEditProductForm.scss';
 import { useCategory, useProduct } from '../../../../hooks';
 
 export function AddEditProductForm(props) {
+
     const { onClose, onRefetch, product } = props;
 
-    const [categoriesFormat, setCategoriesFormat] = useState([]);
+    const [ categoriesFormat, setCategoriesFormat ] = useState([]);
 
     const { categories, getCategories } = useCategory();
-    const { addProduct,  } = useProduct();
+    const { addProduct, updateProduct } = useProduct();
 
     const formik = useFormik({
         initialValues: initialValues(product),
         validationSchema: Yup.object(product ? updateValidationSchema() : newValidationSchema()),
         validateOnChange: false,
         onSubmit: async (formValue) => {
-            if (product) await (product.id, formValue);
+
+            if (product) await updateProduct(product.id, formValue);
             else await addProduct(formValue);
 
             onRefetch();
@@ -29,9 +31,8 @@ export function AddEditProductForm(props) {
         }
     });
 
-    useEffect(() => {
-        getCategories();
-    }, [getCategories]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    useEffect(() => getCategories(), []);
 
     useEffect(() => {
         setCategoriesFormat(formatDropdownData(categories));
@@ -65,7 +66,7 @@ export function AddEditProductForm(props) {
                 error={formik.errors.category ? true : false}
             />
 
-            {formik.errors.category && (
+            { formik.errors.category && (
                 <div className='ui pointing above prompt label' role="alert" aria-atomic="true">
                     {formik.errors.category}
                 </div>
@@ -80,13 +81,14 @@ export function AddEditProductForm(props) {
             </div>
 
             <Button type='submit' primary fluid>
-                {product ? 'Actualizar' : 'Crear'}
+                { product ? 'Actualizar' : 'Crear' }
             </Button>
         </Form>
-    );
+    )
 }
 
 function formatDropdownData(data) {
+
     return map(data, (item) => ({
         key: item.id,
         text: item.title,
@@ -95,28 +97,31 @@ function formatDropdownData(data) {
 }
 
 function initialValues(data) {
+
     return {
         title: data?.title || '',
         price: data?.price || '',
         category: data?.category || '',
         active: data?.active ? true : false
-    };
+    }
 }
 
 function newValidationSchema() {
+
     return {
         title: Yup.string().required('El nombre del producto es obligatorio'),
         price: Yup.number().required('El precio del producto es obligatorio'),
         category: Yup.number().required('La categoría del producto es obligatoria'),
-        active: Yup.boolean().required(true)
-    };
+        active: Yup.boolean().required(true),
+    }
 }
 
 function updateValidationSchema() {
+
     return {
         title: Yup.string().required('El nombre del producto es obligatorio'),
         price: Yup.number().required('El precio del producto es obligatorio'),
         category: Yup.number().required('La categoría del producto es obligatoria'),
-        active: Yup.boolean().required(true)
-    };
+        active: Yup.boolean().required(true),
+    }
 }
