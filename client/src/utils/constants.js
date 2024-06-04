@@ -1,4 +1,4 @@
-export const BASE_API = 'http://127.0.0.1:8000/api';
+export const BASE_API = 'http://172.203.184.242:8000/api';
 export const TOKEN = 'token';
 
 export const ORDER_STATUS = {
